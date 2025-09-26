@@ -1,0 +1,7 @@
+{
+  "name": "JAY-i Browser",
+  "description": "A web browser application designed with an Android mobile interface. It allows users to navigate to websites, manage history with back and forward buttons, and features a clean, modern user interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
