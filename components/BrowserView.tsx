@@ -36,12 +36,11 @@ const BrowserView: React.FC<BrowserViewProps> = ({ url, isLoading, onLoadingChan
     <div className="flex-grow bg-white dark:bg-gray-800 relative">
       {isLoading && <LoadingSpinner />}
       <iframe
-        key={url}
         ref={iframeRef}
         src={url}
         className={`w-full h-full border-0 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         title="Web Browser"
-        sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-downloads"
         allow="camera"
         onLoad={handleLoad}
         onError={handleError}

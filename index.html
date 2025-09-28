@@ -12,6 +12,7 @@
           extend: {
             animation: {
               'futuristic-boot': 'futuristic-boot 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+              'neon-glow': 'neon-glow 2.5s ease-in-out infinite',
             },
             keyframes: {
               'futuristic-boot': {
@@ -26,6 +27,14 @@
                   filter: 'blur(0px)' 
                 },
               },
+              'neon-glow': {
+                '0%, 100%': {
+                  'box-shadow': '0 0 5px var(--neon-color, #00d9ff), 0 0 10px var(--neon-color, #00d9ff), 0 0 15px var(--neon-color, #00d9ff), 0 0 20px var(--neon-color, #00d9ff)',
+                },
+                '50%': {
+                  'box-shadow': '0 0 10px var(--neon-color, #00d9ff), 0 0 20px var(--neon-color, #00d9ff), 0 0 30px var(--neon-color, #00d9ff), 0 0 40px var(--neon-color, #00d9ff)',
+                }
+              }
             },
           },
         },
